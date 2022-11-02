@@ -26,6 +26,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabels(animation)
+        setupCornerRadius()
     }
     
     // MARK: - IBActions
@@ -45,6 +46,11 @@ class ViewController: UIViewController {
         durationLabel.text = string(from: animation.duration)
         delayLabel.text = string(from: animation.delay)
         runButton.setTitle("Run \(animation.preset)", for: .normal)
+    }
+    
+    private func setupCornerRadius() {
+        animationView.layer.cornerRadius = 10
+        runButton.layer.cornerRadius = 10
     }
     
     private func string(from double: Double) -> String {
