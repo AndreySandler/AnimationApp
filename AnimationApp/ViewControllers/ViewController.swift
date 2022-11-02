@@ -21,31 +21,39 @@ class ViewController: UIViewController {
     @IBOutlet var runButton: UIButton!
     
     // MARK: - Public Properties
-    private let animation: Animation = Animation.getAnimation()
+    private var animation = Animation.getAnimation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupLabels(animation)
+        setupLabels()
         setupCornerRadius()
     }
     
     // MARK: - IBActions
     @IBAction func runAnimationButtonDidTapped() {
-        let animation = Animation.getAnimation()
-        
-        animationView.animation = animation.preset
+        setupAnimation()
+        setupLabels()
         animationView.animate()
-        setupLabels(animation)
+        
+        animation = Animation.getAnimation()
+        runButton.setTitle("Run \(animation.preset)", for: .normal)
     }
     
     // MARK: - Private Functions
-    private func setupLabels(_ animation: Animation) {
+    private func setupAnimation() {
+        animationView.animation = animation.preset
+        animationView.curve = animation.curve
+        animationView.force = animation.force
+        animationView.duration = animation.duration
+        animationView.delay = animation.delay
+    }
+    
+    private func setupLabels() {
         presetLabel.text = animation.preset
         curveLabel.text = animation.curve
         forceLabel.text = string(from: animation.force)
         durationLabel.text = string(from: animation.duration)
         delayLabel.text = string(from: animation.delay)
-        runButton.setTitle("Run \(animation.preset)", for: .normal)
     }
     
     private func setupCornerRadius() {
