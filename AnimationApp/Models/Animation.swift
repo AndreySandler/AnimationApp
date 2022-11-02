@@ -14,31 +14,25 @@ struct Animation {
     let duration: Double
     let delay: Double
     
-    static func getAnimation() -> [Animation] {
-        var animations: [Animation] = []
-        
+    static func getAnimation() -> Animation {
         let presets = DataStore.shared.presets
         let curves = DataStore.shared.curves
-        let forces = Double.random(in: 1...1.3)
-        let durations = Double.random(in: 0.8...1.1)
-        let delays = Double.random(in: 0...0.3)
-        
         let iterationCount = min(
             presets.count,
             curves.count
         )
         
-        for index in 0..<iterationCount {
-            animations.append(
-                Animation(
-                    preset: presets[index],
-                    curve: curves[index],
-                    force: forces,
-                    duration: durations,
-                    delay: delays
-                )
+        let forces = (1...iterationCount).map( {_ in Double.random(in: 1...1.3)} )
+        let durations = (1...iterationCount).map( {_ in Double.random(in: 0.8...1.1)} )
+        let delays = (1...iterationCount).map( {_ in Double.random(in: 0...0.3)} )
+        
+        let animation = Animation(
+                preset: presets.randomElement() ?? "",
+                curve: curves.randomElement() ?? "",
+                force: forces.randomElement() ?? 0,
+                duration: durations.randomElement() ?? 0,
+                delay: delays.randomElement() ?? 0
             )
-        }
-        return animations
+        return animation
     }
 }
