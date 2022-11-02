@@ -14,6 +14,7 @@
 		83AB0BAE291268F700C9C68E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83AB0BAD291268F700C9C68E /* Assets.xcassets */; };
 		83AB0BB1291268F700C9C68E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83AB0BAF291268F700C9C68E /* LaunchScreen.storyboard */; };
 		83AB0BBA2912697200C9C68E /* SpringAnimation in Frameworks */ = {isa = PBXBuildFile; productRef = 83AB0BB92912697200C9C68E /* SpringAnimation */; };
+		83AB0BBF2912724800C9C68E /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AB0BBE2912724800C9C68E /* Animation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		83AB0BAD291268F700C9C68E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		83AB0BB0291268F700C9C68E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		83AB0BB2291268F700C9C68E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83AB0BBE2912724800C9C68E /* Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXGroup;
 			children = (
 				83AB0BBC2912699C00C9C68E /* ViewControllers */,
+				83AB0BC02912725100C9C68E /* Models */,
 				83AB0BBB2912699600C9C68E /* Config */,
 				83AB0BBD291269A300C9C68E /* Storyboards */,
 				83AB0BAD291268F700C9C68E /* Assets.xcassets */,
@@ -91,6 +94,14 @@
 				83AB0BAF291268F700C9C68E /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		83AB0BC02912725100C9C68E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				83AB0BBE2912724800C9C68E /* Animation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 			files = (
 				83AB0BA9291268F600C9C68E /* ViewController.swift in Sources */,
 				83AB0BA5291268F600C9C68E /* AppDelegate.swift in Sources */,
+				83AB0BBF2912724800C9C68E /* Animation.swift in Sources */,
 				83AB0BA7291268F600C9C68E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -318,7 +330,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = J572FQ3494;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AnimationApp/Config/Info.plist;
@@ -332,7 +344,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreySandler.AnimationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
@@ -350,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = J572FQ3494;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AnimationApp/Config/Info.plist;
@@ -364,7 +376,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.1.0;
+				MARKETING_VERSION = 0.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.AndreySandler.AnimationApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
