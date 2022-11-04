@@ -14,7 +14,7 @@ struct Animation {
     let duration: Double
     let delay: Double
     
-    static func getAnimation() -> Animation {
+    static func getRandomAnimation() -> Animation {
         let animation = Animation(
             preset: DataStore.shared.presets.randomElement() ?? "",
             curve: DataStore.shared.curves.randomElement() ?? "",

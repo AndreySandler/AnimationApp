@@ -18,25 +18,23 @@ class AnimationViewController: UIViewController {
     @IBOutlet var forceLabel: UILabel!
     @IBOutlet var durationLabel: UILabel!
     @IBOutlet var delayLabel: UILabel!
-    @IBOutlet var runButton: UIButton!
     
     // MARK: - Public Properties
-    private var animation = Animation.getAnimation()
+    private var animation = Animation.getRandomAnimation()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLabels()
-        setupCornerRadius()
     }
     
     // MARK: - IBActions
-    @IBAction func runAnimationButtonDidTapped() {
+    @IBAction func runButtonDidTapped(_ sender: UIButton) {
         setupAnimation()
         setupLabels()
         animationView.animate()
         
-        animation = Animation.getAnimation()
-        runButton.setTitle("Run \(animation.preset)", for: .normal)
+        animation = Animation.getRandomAnimation()
+        sender.setTitle("Run \(animation.preset)", for: .normal)
     }
     
     // MARK: - Private Functions
@@ -54,11 +52,6 @@ class AnimationViewController: UIViewController {
         forceLabel.text = string(from: animation.force)
         durationLabel.text = string(from: animation.duration)
         delayLabel.text = string(from: animation.delay)
-    }
-    
-    private func setupCornerRadius() {
-        animationView.layer.cornerRadius = 10
-        runButton.layer.cornerRadius = 10
     }
     
     private func string(from double: Double) -> String {

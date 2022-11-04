@@ -23,8 +23,13 @@
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Run"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="runAnimationButtonDidTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebP-Jo-J5v"/>
+                                    <action selector="runButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tCZ-yp-vsB"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Owh-Te-pVm" customClass="SpringView" customModule="SpringAnimation">
@@ -130,6 +135,11 @@
                                     <constraint firstItem="ifV-pI-pvE" firstAttribute="top" secondItem="huv-kv-tsz" secondAttribute="bottom" constant="1" id="qEO-wt-Dai"/>
                                     <constraint firstItem="1ma-Y8-xXA" firstAttribute="leading" secondItem="Owh-Te-pVm" secondAttribute="leading" constant="10" id="z2c-gO-xvP"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -151,7 +161,6 @@
                         <outlet property="durationLabel" destination="2bg-Bv-Uan" id="Pqf-x9-S7H"/>
                         <outlet property="forceLabel" destination="lPo-fD-Vly" id="vKI-ft-TsY"/>
                         <outlet property="presetLabel" destination="Fj1-iq-FcU" id="4YE-81-naC"/>
-                        <outlet property="runButton" destination="SC8-Hw-voI" id="Jfb-Xi-A5u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
